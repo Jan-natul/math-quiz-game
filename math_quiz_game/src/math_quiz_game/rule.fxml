@@ -20,7 +20,7 @@
             <Font name="Georgia Bold" size="31.0" />
          </font>
       </Label>
-      <Button layoutX="108.0" layoutY="287.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="74.0" text="Back">
+      <Button layoutX="117.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchToRules" prefHeight="32.0" prefWidth="74.0" text="Back">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

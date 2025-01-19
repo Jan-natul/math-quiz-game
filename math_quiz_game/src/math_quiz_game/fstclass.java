@@ -20,6 +20,10 @@ public class fstclass {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
+    private Button ply;
+    @FXML
+    private Button rl;
     
     public void switchToRules(ActionEvent event) throws IOException{
          Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -29,6 +33,7 @@ public class fstclass {
          stage.show();
     }
     
+    @FXML
     public void switchToBack(ActionEvent event) throws IOException{
        Parent root = FXMLLoader.load(getClass().getResource("rule.fxml"));
          stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -38,8 +43,13 @@ public class fstclass {
     }
 
     @FXML
-    private void switchToBack(MouseEvent event) {
+    private void switchToRules(MouseEvent event) {
     }
+
+    @FXML
+    private void playAction(ActionEvent event) {
+    }
+
 
 
 }
