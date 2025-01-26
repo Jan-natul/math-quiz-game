@@ -15,6 +15,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -26,9 +29,13 @@ public class FXMLDocumentController implements Initializable {
     
     private Label label;
     @FXML
-    private Button ply;
+    private TextField name;
     @FXML
-    private Button rl;
+    private Button btnsbmt;
+    @FXML
+    private TextField gndr;
+    @FXML
+    private TextField age;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -37,25 +44,24 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
 
-    @FXML
-    private void playAction(ActionEvent event) {
+    
+    private void playAction(ActionEvent event) throws IOException {  
     }
 
-    @FXML
+    
     private void ruleAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("rule.fxml"));
-        
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+   
+    }
+
+    
+    private void switchToRules(MouseEvent event) {
     }
 
     @FXML
-    private void switchToRules(MouseEvent event) {
+    private void switchToSubmit(ActionEvent event) {
     }
     
 }

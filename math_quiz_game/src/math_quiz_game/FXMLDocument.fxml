@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="math_quiz_game.fstclass">
    <children>
-      <ImageView fitHeight="398.0" fitWidth="347.0" layoutX="-2.0" layoutY="-2.0" onDragDetected="#switchToRules" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="398.0" fitWidth="347.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/game%20pic_2.jpg" />
          </image>
@@ -19,12 +19,12 @@
             <Font name="Georgia Bold" size="38.0" />
          </font>
       </Label>
-      <Button fx:id="ply" layoutX="104.0" layoutY="185.0" mnemonicParsing="false" onAction="#playAction" prefHeight="26.0" prefWidth="110.0" text="Play">
+      <Button fx:id="ply" layoutX="104.0" layoutY="158.0" mnemonicParsing="false" onAction="#playAction" prefHeight="26.0" prefWidth="110.0" text="Play">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="rl" layoutX="104.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchToBack" prefHeight="26.0" prefWidth="110.0" text="Rules">
+      <Button layoutX="104.0" layoutY="198.0" mnemonicParsing="false" onAction="#switchToBack" prefHeight="26.0" prefWidth="110.0" text="Rules">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font name="Georgia Bold" size="38.0" />
          </font>
       </Label>
-      <Button layoutX="105.0" layoutY="271.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Leader Board">
+      <Button layoutX="105.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Leader Board">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="104.0" layoutY="310.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Make Account">
+      <Button layoutX="105.0" layoutY="287.0" mnemonicParsing="false" onAction="#participantAction" prefHeight="26.0" prefWidth="110.0" text="Participant">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

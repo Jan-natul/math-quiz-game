@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/player.java</file>
             <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/fstclass.java</file>
-            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/FXMLDocument.fxml</file>
-            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/account.fxml</file>
-            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/rule.fxml</file>
+            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/participant.fxml</file>
+            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/accountController.java</file>
             <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/RuleController.java</file>
             <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/Math_quiz_game.java</file>
+            <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/ParticipantController.java</file>
             <file>file:/C:/Users/HP/Downloads/OneDrive/Documents/GitHub/math-quiz-game/math_quiz_game/src/math_quiz_game/FXMLDocumentController.java</file>
         </group>
     </open-files>
