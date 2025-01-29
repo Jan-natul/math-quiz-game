@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="396.0" prefWidth="318.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="math_quiz_game.fstclass">
+   <children>
+      <ImageView fitHeight="398.0" fitWidth="347.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/game%20pic_2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="67.0" layoutY="50.0" text="Top Players">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvRanking" layoutX="14.0" layoutY="135.0" prefHeight="154.0" prefWidth="290.0">
+        <columns>
+          <TableColumn fx:id="rank" prefWidth="62.4000244140625" text="Rank" />
+          <TableColumn fx:id="topname" prefWidth="88.800048828125" text="Name" />
+            <TableColumn fx:id="topcoin" prefWidth="64.00006103515625" text="Coins" />
+            <TableColumn fx:id="toptime" prefWidth="70.39990234375" text="Time" />
+        </columns>
+      </TableView>
+      <Button fx:id="rback" layoutX="117.0" layoutY="332.0" mnemonicParsing="false" onAction="#backAction" prefHeight="26.0" prefWidth="69.0" text="Back" />
+   </children>
+</AnchorPane>

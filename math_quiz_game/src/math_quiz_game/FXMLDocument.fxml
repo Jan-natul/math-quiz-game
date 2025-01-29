@@ -34,7 +34,7 @@
             <Font name="Georgia Bold" size="38.0" />
          </font>
       </Label>
-      <Button layoutX="105.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Leader Board">
+      <Button fx:id="btnrank" layoutX="105.0" layoutY="243.0" mnemonicParsing="false" onAction="#rankAction" prefHeight="26.0" prefWidth="110.0" text="Ranking">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
