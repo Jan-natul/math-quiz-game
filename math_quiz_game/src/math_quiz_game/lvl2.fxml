@@ -47,5 +47,6 @@
          </image>
       </ImageView>
       <Label fx:id="lbl2" layoutX="50.0" layoutY="346.0" prefHeight="26.0" prefWidth="208.0" />
+      <Button fx:id="b2" layoutX="-2.0" layoutY="1.0" mnemonicParsing="false" onAction="#backAction" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: white;" text="back" />
    </children>
 </AnchorPane>

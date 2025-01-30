@@ -23,22 +23,39 @@ public class fstclass {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
     private TextField tf1;
+    @FXML
     private Label lbl1;
+    @FXML
     private TableView<player> tvplayer;
+    @FXML
     private TableColumn<player, String> colname;
+    @FXML
     private TableColumn<player, String> colgender;
+    @FXML
     private TableColumn<player, Integer> colage;
+    @FXML
     private TextField name;
+    @FXML
     private Button btnsbmt;
+    @FXML
     private TextField gndr;
+    @FXML
     private TextField age;
+    @FXML
     private TextField tf2;
+    @FXML
     private Label lbl3;
+    @FXML
     private Label lbl4;
+    @FXML
     private TextField tf3;
+    @FXML
     private TextField tf4;
+    @FXML
     private Label lbl5;
+    @FXML
     private TextField tf5;
     @FXML
     private Label lblTime;
@@ -46,12 +63,21 @@ public class fstclass {
     private long startTime;
     private long endTime;
     private TableColumn<leaderBoard,Integer> rank;
+    @FXML
     private TableColumn<leaderBoard, String> topname;
+    @FXML
     private TableColumn<leaderBoard, Integer> topcoin;
+    @FXML
     private TableColumn<leaderBoard, Long> toptime;
+    @FXML
     private TableView<leaderBoard> tvRanking;
     @FXML
-    private Button btnhm;
+    private Button ply;
+    @FXML
+    private Button btnrank;
+    @FXML
+    private Button crs;
+    @FXML
     public void switchToRules(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -59,6 +85,7 @@ public class fstclass {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
     public void switchToBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("rule.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -66,6 +93,7 @@ public class fstclass {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
     private void switchToSubmit(ActionEvent event) throws IOException {
         if (event.getSource() == btnsbmt) {
             insert();
@@ -80,6 +108,7 @@ public class fstclass {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
     private void playAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("account.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -87,6 +116,7 @@ public class fstclass {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
     private void DoneAction(ActionEvent event) throws IOException {
         String ans = tf1.getText();
 
@@ -196,6 +226,7 @@ public class fstclass {
             e.printStackTrace();
         }
     }
+    @FXML
     private void participantAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("participant.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -207,6 +238,7 @@ public class fstclass {
         showPlayers();
         updateLeaderboardTable();
     }
+    @FXML
     private void pbackAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -214,6 +246,7 @@ public class fstclass {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
     private void DoneAction2(ActionEvent event) throws IOException {
         String ans = tf2.getText();
 
@@ -227,6 +260,7 @@ public class fstclass {
             lbl1.setText("Your answer is incorrect.");
         }
     }
+    @FXML
     private void DoneAction3(ActionEvent event) throws IOException {
         String ans = tf3.getText();
 
@@ -240,6 +274,7 @@ public class fstclass {
             lbl3.setText("Your answer is incorrect.");
         }
     }
+    @FXML
     private void DoneAction4(ActionEvent event) throws IOException {
         String ans = tf4.getText();
 
@@ -253,6 +288,7 @@ public class fstclass {
             lbl4.setText("Your answer is incorrect.");
         }
     }
+    @FXML
     private void DoneAction5(ActionEvent event) throws IOException {
         String ans = tf5.getText();
 
@@ -290,6 +326,7 @@ public class fstclass {
     public void setElapsedTime(long elapsedTimeInSeconds) {
         lblTime.setText( + elapsedTimeInSeconds + " sec ");
     }
+    @FXML
     private void backAction(ActionEvent event) throws IOException {
          Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -348,7 +385,7 @@ public class fstclass {
         entry.setRank(rankCounter++);
     }
 }
-
+    @FXML
     private void rankAction(ActionEvent event) throws IOException {
          Parent root = FXMLLoader.load(getClass().getResource("leader.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -356,6 +393,14 @@ public class fstclass {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    private void crossAction(ActionEvent event) {
+    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    stage.close();
+    System.exit(0);
+    }
+
 }
     
 

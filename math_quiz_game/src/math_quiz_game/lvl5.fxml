@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="396.0" prefWidth="318.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="math_quiz_game.fstclass">
+<AnchorPane id="AnchorPane" prefHeight="396.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="math_quiz_game.fstclass">
    <children>
       <ImageView fitHeight="398.0" fitWidth="347.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -49,5 +48,6 @@
             <Image url="@../image/qus%205.png" />
          </image>
       </ImageView>
+      <Button fx:id="b5" layoutY="1.0" mnemonicParsing="false" onAction="#backAction" prefHeight="26.0" prefWidth="44.0" style="-fx-background-color: white;" text="Back" />
    </children>
 </AnchorPane>

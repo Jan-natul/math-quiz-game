@@ -45,5 +45,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Button fx:id="b3" layoutY="1.0" mnemonicParsing="false" onAction="#backAction" prefHeight="26.0" prefWidth="43.0" style="-fx-background-color: white;" text="Back" />
    </children>
 </AnchorPane>

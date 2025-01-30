@@ -47,5 +47,6 @@
             <Image url="@../image/coinjpg.jpg" />
          </image>
       </ImageView>
+      <Button fx:id="b1" layoutY="1.0" mnemonicParsing="false" onAction="#backAction" prefHeight="26.0" prefWidth="47.0" style="-fx-background-color: white;" text="Back" />
    </children>
 </AnchorPane>
