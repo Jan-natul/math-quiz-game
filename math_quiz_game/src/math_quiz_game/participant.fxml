@@ -21,11 +21,11 @@
             <Font name="Berlin Sans FB Bold" size="31.0" />
          </font>
       </Label>
-      <TableView fx:id="tvplayer" layoutX="32.0" layoutY="111.0" prefHeight="200.0" prefWidth="253.0" style="-fx-background-color: pink;">
+      <TableView fx:id="tvplayer" layoutX="9.0" layoutY="95.0" prefHeight="216.0" prefWidth="302.0" style="-fx-background-color: pink;">
         <columns>
-          <TableColumn fx:id="colname" prefWidth="109.5999813079834" text="Name" />
-          <TableColumn fx:id="colgender" prefWidth="75.20001220703125" text="Gender" />
-            <TableColumn fx:id="colage" prefWidth="68.79998779296875" text="Age" />
+          <TableColumn fx:id="colname" prefWidth="133.60003089904785" text="Name" />
+          <TableColumn fx:id="colgender" prefWidth="84.7999267578125" text="Gender" />
+            <TableColumn fx:id="colage" prefWidth="84.79998779296875" text="Age" />
         </columns>
       </TableView>
       <Button fx:id="btnpback" layoutX="120.0" layoutY="341.0" mnemonicParsing="false" onAction="#pbackAction" prefHeight="26.0" prefWidth="74.0" text="Back" />

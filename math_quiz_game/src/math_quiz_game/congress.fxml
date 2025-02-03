@@ -39,11 +39,14 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Label layoutX="54.0" layoutY="309.0" prefHeight="18.0" prefWidth="115.0" text="Completing Time:">
+      <Label layoutX="29.0" layoutY="307.0" prefHeight="18.0" prefWidth="115.0" text="Completing Time:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblTime" layoutX="170.0" layoutY="303.0" prefHeight="27.0" prefWidth="134.0" />
+      <Label fx:id="lblTime" layoutX="144.0" layoutY="303.0" prefHeight="27.0" prefWidth="146.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
    </children>
 </AnchorPane>

@@ -27,6 +27,8 @@ public class fstclass {
     @FXML
     private Label lbl1;
     @FXML
+    private Label lbl2;
+    @FXML
     private TableView<player> tvplayer;
     @FXML
     private TableColumn<player, String> colname;
@@ -38,9 +40,9 @@ public class fstclass {
     private TextField name;
     @FXML
     private Button btnsbmt;
-    @FXML
-    private TextField gndr;
-    @FXML
+        @FXML
+    private ComboBox<String> gndr;
+            @FXML
     private TextField age;
     @FXML
     private TextField tf2;
@@ -79,6 +81,8 @@ public class fstclass {
     public String S_name;
     
     public Preferences prefs = Preferences.userRoot().node("Math_quiz_game");
+    @FXML
+    private Button btnpback;
     
     
     @FXML
@@ -210,29 +214,34 @@ public class fstclass {
 
     void insert() {
         prefs.put("name", name.getText());
-        if (name.getText().isEmpty() || gndr.getText().isEmpty() || age.getText().isEmpty()) {
-            System.out.println("All fields must be filled.");
-            return;
-        }
+    
+    // Validate input
+    if (name.getText().isEmpty() || gndr.getValue() == null || age.getText().isEmpty()) {
+        System.out.println("All fields must be filled.");
+        return;
+    }
 
-        if (playerExists(name.getText(), gndr.getText(), age.getText())) {
-            System.out.println("Player already exists in the database.");
-            return;
-        }
+    if (playerExists(name.getText(), gndr.getValue(), age.getText())) {
+        System.out.println("Player already exists in the database.");
+        return;
+    }
 
-        String query = "INSERT INTO data (name, gender, age) VALUES (?, ?, ?)";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
-            S_name = name.getText();
-            pstmt.setString(1, name.getText());
-            pstmt.setString(2, gndr.getText());
-            pstmt.setInt(3, Integer.parseInt(age.getText()));
-            pstmt.executeUpdate();
-            System.out.println("Player added successfully.");
-            showPlayers();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    String query = "INSERT INTO data (name, gender, age) VALUES (?, ?, ?)";
+    try (Connection conn = getConnection();
+         PreparedStatement pstmt = conn.prepareStatement(query)) {
+        
+        // Use ComboBox value for gender
+        pstmt.setString(1, name.getText());
+        pstmt.setString(2, gndr.getValue()); // Use ComboBox value
+        pstmt.setInt(3, Integer.parseInt(age.getText()));
+        
+        pstmt.executeUpdate();
+        System.out.println("Player added successfully.");
+        showPlayers();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+       
     }
     @FXML
     private void participantAction(ActionEvent event) throws IOException {
@@ -243,6 +252,11 @@ public class fstclass {
         stage.show();
     }
     public void initialize() {
+        if (gndr == null) {
+        System.out.println("ComboBox is not initialized!");
+        return;
+    }
+        gndr.getItems().addAll("Male", "Female");
         showPlayers();
         updateLeaderboardTable();
     }
@@ -265,7 +279,7 @@ public class fstclass {
             stage.setScene(scene);
             stage.show();
         } else {
-            lbl1.setText("Your answer is incorrect.");
+            lbl2.setText("Your answer is incorrect.");
         }
     }
     @FXML

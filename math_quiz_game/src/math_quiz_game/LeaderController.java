@@ -19,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class LeaderController {
@@ -35,9 +36,11 @@ public class LeaderController {
     private TableColumn<Ranking, Long> toptime;
 
     private ObservableList<Ranking> rankingData = FXCollections.observableArrayList();
+    @FXML
+    private Button rback;
 
     public void initialize() {
-        // Initialize columns with the properties of the Ranking class
+        
         rank.setCellValueFactory(new PropertyValueFactory<>("rank"));
         topname.setCellValueFactory(new PropertyValueFactory<>("name"));
         topcoin.setCellValueFactory(new PropertyValueFactory<>("coins"));
@@ -46,7 +49,7 @@ public class LeaderController {
         loadRankingData();
     }
 
-    // Method to load data from MySQL database and populate the TableView
+    
     private void loadRankingData() {
         String url = "jdbc:mysql://localhost:3306/quizgame";
         String user = "root";
@@ -62,10 +65,10 @@ public class LeaderController {
                 int coins = rs.getInt("Coins");
                 long time = rs.getLong("Time");
 
-                // Add each ranking to the ObservableList
+                
                 rankingData.add(new Ranking(rank, name, coins, time));
             }
-            // Set the table data
+            
             tvRanking.setItems(rankingData);
 
         } catch (Exception e) {
@@ -73,7 +76,8 @@ public class LeaderController {
         }
     }
 
-    // Back button action (you can implement this if needed)
+    
+    @FXML
     public void backAction(javafx.event.ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

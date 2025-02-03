@@ -19,12 +19,12 @@
             <Font name="Georgia Bold" size="38.0" />
          </font>
       </Label>
-      <Button fx:id="ply" layoutX="104.0" layoutY="158.0" mnemonicParsing="false" onAction="#playAction" prefHeight="26.0" prefWidth="110.0" text="Play">
+      <Button fx:id="ply" layoutX="105.0" layoutY="170.0" mnemonicParsing="false" onAction="#playAction" prefHeight="26.0" prefWidth="110.0" text="Play">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="104.0" layoutY="198.0" mnemonicParsing="false" onAction="#switchToBack" prefHeight="26.0" prefWidth="110.0" text="Rules">
+      <Button layoutX="105.0" layoutY="214.0" mnemonicParsing="false" onAction="#switchToBack" prefHeight="26.0" prefWidth="110.0" text="Rules">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -34,21 +34,19 @@
             <Font name="Georgia Bold" size="38.0" />
          </font>
       </Label>
-      <Button fx:id="btnrank" layoutX="105.0" layoutY="243.0" mnemonicParsing="false" onAction="#rankAction" prefHeight="26.0" prefWidth="110.0" text="Ranking">
+      <Button fx:id="btnrank" layoutX="105.0" layoutY="256.0" mnemonicParsing="false" onAction="#rankAction" prefHeight="26.0" prefWidth="110.0" text="Ranking">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="64.0" layoutY="346.0" text="Make acount for play the game">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Button layoutX="105.0" layoutY="287.0" mnemonicParsing="false" onAction="#participantAction" prefHeight="26.0" prefWidth="110.0" text="Participant">
+      <Button layoutX="105.0" layoutY="306.0" mnemonicParsing="false" onAction="#participantAction" prefHeight="26.0" prefWidth="110.0" text="Participant">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="crs" layoutX="272.0" layoutY="-3.0" mnemonicParsing="false" onAction="#crossAction" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: Red;" text="Close" textFill="WHITE" />
+      <Button fx:id="crs" layoutX="262.0" layoutY="-2.0" mnemonicParsing="false" onAction="#crossAction" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: Red;" text="Close" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>
