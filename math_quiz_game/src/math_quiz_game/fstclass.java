@@ -1,9 +1,8 @@
-
-   
- package math_quiz_game;
+package math_quiz_game;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.prefs.Preferences;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -77,6 +76,11 @@ public class fstclass {
     private Button btnrank;
     @FXML
     private Button crs;
+    public String S_name;
+    
+    public Preferences prefs = Preferences.userRoot().node("Math_quiz_game");
+    
+    
     @FXML
     public void switchToRules(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -95,6 +99,8 @@ public class fstclass {
     }
     @FXML
     private void switchToSubmit(ActionEvent event) throws IOException {
+        System.out.println("my name: " + S_name);
+        
         if (event.getSource() == btnsbmt) {
             insert();
         }
@@ -203,6 +209,7 @@ public class fstclass {
     }
 
     void insert() {
+        prefs.put("name", name.getText());
         if (name.getText().isEmpty() || gndr.getText().isEmpty() || age.getText().isEmpty()) {
             System.out.println("All fields must be filled.");
             return;
@@ -216,6 +223,7 @@ public class fstclass {
         String query = "INSERT INTO data (name, gender, age) VALUES (?, ?, ?)";
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query)) {
+            S_name = name.getText();
             pstmt.setString(1, name.getText());
             pstmt.setString(2, gndr.getText());
             pstmt.setInt(3, Integer.parseInt(age.getText()));
@@ -317,6 +325,8 @@ public class fstclass {
     }
     @FXML
     private void homaAction(ActionEvent event) throws IOException {
+        String storedName = prefs.get("name", "Default Name"); 
+        System.out.println("my name: " + prefs.get("name", "Default"));
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -325,6 +335,8 @@ public class fstclass {
     }
     public void setElapsedTime(long elapsedTimeInSeconds) {
         lblTime.setText( + elapsedTimeInSeconds + " sec ");
+        String storedName = prefs.get("name", "Default Name");
+        DatabaseHandler.addRanking(storedName, 25, elapsedTimeInSeconds);
     }
     @FXML
     private void backAction(ActionEvent event) throws IOException {
@@ -344,7 +356,7 @@ public class fstclass {
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 leaderboardList.add(new leaderBoard(
-                        rs.getInt("id"), 
+                        rs.getInt("rank"), 
                         rs.getString("name"), 
                         rs.getInt("coins"), 
                         rs.getLong("time")));
