@@ -252,13 +252,13 @@ public class fstclass {
         stage.show();
     }
     public void initialize() {
+        showPlayers();
+        updateLeaderboardTable();
         if (gndr == null) {
         System.out.println("ComboBox is not initialized!");
         return;
     }
         gndr.getItems().addAll("Male", "Female");
-        showPlayers();
-        updateLeaderboardTable();
     }
     @FXML
     private void pbackAction(ActionEvent event) throws IOException {
